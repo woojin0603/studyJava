@@ -1,0 +1,22 @@
+package io.start;
+
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Arrays;
+
+public class StreamStartMain4 {
+
+    static void main() throws IOException {
+        FileOutputStream fos = new FileOutputStream("temp/hello.bat");
+        byte[] input = {65, 66, 67};
+        fos.write(input);
+        fos.close();
+
+        FileInputStream fis = new FileInputStream("temp/hello.bat");
+
+        byte[] readBytes = fis.readAllBytes();
+        System.out.println(Arrays.toString(readBytes));
+        fis.close();
+    }
+}
