@@ -9,6 +9,5 @@ public class ClientMain {
     static void main() throws IOException {
         Client client = new Client("localhost", 12345);
         client.start();
-
     }
 }
